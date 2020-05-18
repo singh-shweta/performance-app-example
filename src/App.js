@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
+import {
+  Row,
+  Col
+} from "reactstrap";
+import CardsList from "./CardsList";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = (props) => {
+  return (<><Row className="mt-4">
+    <Col className="text-center">
+    <strong>Cards List</strong>
+    </Col>
+  </Row>
+  <CardsList />
+  </>)
+ };
 
 export default App;
